@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Auto Push on Commit",
+  "description": "git commit 실행 후 자동으로 git push를 수행합니다.",
+  "version": "1",
+  "when": {
+    "type": "postToolUse",
+    "toolTypes": [
+      "shell"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "방금 실행된 명령어가 git commit인지 확인하세요. git commit이 아니라면 아무 작업도 하지 마세요.\n\ngit commit이 맞다면 `git push`를 실행하세요."
+  }
+}
