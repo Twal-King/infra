@@ -16,9 +16,10 @@ spec:
     spec:
       containers:
         - name: backend
-          image: localhost:5000/backend:latest
+          image: 10.106.150.245:5000/backend:latest
+          imagePullPolicy: Always
           ports:
-            - containerPort: 8000
+            - containerPort: 8080
           resources:
             requests:
               cpu: "100m"
